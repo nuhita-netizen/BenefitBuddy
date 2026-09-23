@@ -1,0 +1,13 @@
+#FastAPI
+pip install fastapi uvicorn --break-system-packages
+
+form fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"status": "BenefitBuddy API  running"}
+
+#run this script at terminal
+# uvicorn main:app --reload

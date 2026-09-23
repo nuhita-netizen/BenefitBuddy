@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-mello-cream: #F9F6F0;
+  --color-mello-terracotta: #B95C33;
+  --color-mello-sand: #E0B896;
+  --color-mello-charcoal: #2D2323;
+  --color-mello-white: #FFFFFF;
+}
+
+@layer utilities {
+  .mello-card {
+    background-color: var(--color-mello-white);
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  
+  .mello-card-sand {
+    background-color: var(--color-mello-sand);
+    border-radius: 2rem;
+  }
+  
+  .mello-card-terracotta {
+    background-color: var(--color-mello-terracotta);
+    border-radius: 2rem;
+    color: var(--color-mello-white);
+  }
+  
+  .mello-input {
+    background-color: var(--color-mello-white);
+    color: var(--color-mello-charcoal);
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .mello-input:focus {
+    border-color: var(--color-mello-terracotta);
+    outline: none;
+    box-shadow: 0 4px 15px rgba(185, 92, 51, 0.15);
+  }
+
+  .mello-button {
+    background-color: var(--color-mello-terracotta);
+    color: var(--color-mello-white);
+    border-radius: 2rem;
+    transition: all 0.2s ease;
+    font-weight: 600;
+  }
+  
+  .mello-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(185, 92, 51, 0.3);
+  }
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #020617; /* slate-950 */
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Base styles to remove default Vite styles */
+#root {
+  width: 100%;
+}
